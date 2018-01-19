@@ -1,6 +1,9 @@
 package Shop.Instruments;
 
-public abstract class Instrument {
+import Shop.ISellable;
+import Shop.StockItem;
+
+public abstract class Instrument extends StockItem implements IPlayable {
 
     private String category;
     private String colour;
@@ -8,7 +11,8 @@ public abstract class Instrument {
 //    private String brand;
 
 
-    public Instrument(String category, String colour, String material){
+    public Instrument(String description, double wholesalePrice, double retailPrice, String category, String colour, String material){
+        super(description, wholesalePrice, retailPrice);
         this.category = category;
         this.colour = colour;
         this.material = material;
@@ -16,5 +20,13 @@ public abstract class Instrument {
 
     public String getCategory() {
         return this.category;
+    }
+
+    public String getColour() {
+        return this.colour;
+    }
+
+    public String getMaterial() {
+        return this.material;
     }
 }

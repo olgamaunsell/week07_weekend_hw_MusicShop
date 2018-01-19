@@ -13,13 +13,27 @@ public class InstrumentTest {
     @Before
 
     public void before(){
-        trumpet = new Trumpet("Brass", "Silver", "Silver Plated");
+        trumpet = new Trumpet(
+                "Silver Trumpet(3)",
+                99.99,
+                199.99,
+                "Brass",
+                "Silver",
+                "Silver Plated",
+                3
+        );
+
 
     }
 
    @Test
 
-    public void canGetCategory(){
+   public void canGetCategory(){
         assertEquals("Brass", trumpet.getCategory());
+   }
+
+   @Test
+   public void canGetValves(){
+       assertEquals(3, trumpet.getValves());
    }
 }

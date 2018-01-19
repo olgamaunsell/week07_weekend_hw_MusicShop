@@ -11,4 +11,8 @@ public class SheetMusic extends StockItem {
         super(description, wholesalePrice, retailPrice);
         this.instrumentType = instrumentType;
     }
+
+    public InstrumentType getInstrumentType() {
+        return this.instrumentType;
+    }
 }

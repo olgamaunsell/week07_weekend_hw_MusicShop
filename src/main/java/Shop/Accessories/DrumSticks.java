@@ -8,5 +8,10 @@ public class DrumSticks extends StockItem {
 
     public DrumSticks(String description,double wholesalePrice, double retailPrice, String tip){
         super(description, wholesalePrice, retailPrice);
+        this.tip = tip;
+    }
+
+    public String getTip() {
+        return this.tip;
     }
 }

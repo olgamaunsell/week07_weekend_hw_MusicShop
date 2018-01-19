@@ -1,15 +1,15 @@
 package Shop;
 
-public abstract class StockItem {
+public abstract class StockItem implements ISellable{
 
     private String description;
     private double wholesalePrice;
-    private double retailsPrice;
+    private double retailPrice;
 
     public StockItem(String description, double wholesalePrice, double retailPrice){
         this.description = description;
         this.wholesalePrice = wholesalePrice;
-        this.retailsPrice = retailPrice;
+        this.retailPrice = retailPrice;
     }
 
     public String getDescription() {
@@ -18,5 +18,9 @@ public abstract class StockItem {
 
     public double getWholesalePrice() {
         return this.wholesalePrice;
+    }
+
+    public double getRetailPrice() {
+        return this.retailPrice;
     }
 }

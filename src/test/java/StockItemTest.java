@@ -28,9 +28,28 @@ public class StockItemTest {
     }
 
     @Test
+
+    public void canGetGuitarStringsGauge(){
+        assertEquals(0.40, guitarStrings.getStringGauge(), 0.01);
+    }
+
+    @Test
     public void canGetDrumSticksWholesalePrice(){
         assertEquals(2.50, drumSticks.getWholesalePrice(), 0.01);
     }
 
+    @Test
+    public void canGetDrumSticksTip(){
+        assertEquals("Wood", drumSticks.getTip());
+    }
 
+    @Test
+    public void canGetViolinSheetMusicsRetailPrice(){
+        assertEquals(1.99, violinSheetMusic.getRetailPrice(), 0.01);
+    }
+
+    @Test
+    public void canGetViolinSheetMusicInstrumentType(){
+        assertEquals(InstrumentType.Violin, violinSheetMusic.getInstrumentType());
+    }
 }
