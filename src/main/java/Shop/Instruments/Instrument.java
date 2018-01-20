@@ -11,8 +11,8 @@ public abstract class Instrument extends StockItem implements IPlayable {
 //    private String brand;
 
 
-    public Instrument(String description, double wholesalePrice, double retailPrice, String category, String colour, String material){
-        super(description, wholesalePrice, retailPrice);
+    public Instrument(String description, double wholesalePrice, String category, String colour, String material){
+        super(description, wholesalePrice);
         this.category = category;
         this.colour = colour;
         this.material = material;
@@ -29,4 +29,7 @@ public abstract class Instrument extends StockItem implements IPlayable {
     public String getMaterial() {
         return this.material;
     }
+
+
+
 }

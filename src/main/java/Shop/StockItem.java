@@ -6,10 +6,11 @@ public abstract class StockItem implements ISellable{
     private double wholesalePrice;
     private double retailPrice;
 
-    public StockItem(String description, double wholesalePrice, double retailPrice){
+    public StockItem(String description, double wholesalePrice){
         this.description = description;
         this.wholesalePrice = wholesalePrice;
-        this.retailPrice = retailPrice;
+//        Initialise retailPrice to wholesalePrice until markup takes place ?
+        this.retailPrice = wholesalePrice;
     }
 
     public String getDescription() {
@@ -20,7 +21,17 @@ public abstract class StockItem implements ISellable{
         return this.wholesalePrice;
     }
 
+    public void setRetailPrice(double markup) {
+        this.retailPrice = wholesalePrice + markup;
+    }
+
     public double getRetailPrice() {
         return this.retailPrice;
     }
+
+
+
+//    public double calculateMarkup(double markupIncrease){
+//        return this.wholesalePrice * markupIncrease;
+//    }
 }

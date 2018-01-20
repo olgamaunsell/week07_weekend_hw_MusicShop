@@ -6,8 +6,8 @@ public class Trumpet extends Instrument {
 
     int valves;
 
-    public Trumpet(String description, double wholesalePrice, double retailPrice, String category, String colour, String material, int valves){
-        super(description, wholesalePrice, retailPrice, category, colour, material);
+    public Trumpet(String description, double wholesalePrice, String category, String colour, String material, int valves){
+        super(description, wholesalePrice, category, colour, material);
         this.valves = valves;
     }
 
@@ -15,4 +15,13 @@ public class Trumpet extends Instrument {
     public int getValves() {
         return this.valves;
     }
+
+    public String play(){
+        return "Trumpet sound playing";
+    }
+
+    public double calculateMarkup(double markupIncrease){
+        return getWholesalePrice() * markupIncrease;
+    }
+
 }

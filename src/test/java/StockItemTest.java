@@ -16,9 +16,9 @@ public class StockItemTest {
     @Before
 
     public void before(){
-        guitarStrings = new GuitarStrings("Guitar Strings(0.40)", 2.50, 5.49, 0.40);
-        drumSticks = new DrumSticks("Wood Tip Drumsticks", 2.50, 5.49, "Wood");
-        violinSheetMusic = new SheetMusic("Violin Sheet Music", 0.50, 1.99, InstrumentType.Violin);
+        guitarStrings = new GuitarStrings("Guitar Strings(0.40)", 2.50, 0.40);
+        drumSticks = new DrumSticks("Wood Tip Drumsticks", 2.50, "Wood");
+        violinSheetMusic = new SheetMusic("Violin Sheet Music", 1.40, InstrumentType.Violin);
     }
 
     @Test
@@ -45,7 +45,10 @@ public class StockItemTest {
 
     @Test
     public void canGetViolinSheetMusicsRetailPrice(){
-        assertEquals(1.99, violinSheetMusic.getRetailPrice(), 0.01);
+
+        double markup = violinSheetMusic.calculateMarkup(0.30);
+        violinSheetMusic.setRetailPrice(markup);
+        assertEquals(1.82, violinSheetMusic.getRetailPrice(), 0.01);
     }
 
     @Test
