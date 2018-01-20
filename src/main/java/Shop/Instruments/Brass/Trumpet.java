@@ -24,4 +24,8 @@ public class Trumpet extends Instrument {
         return getWholesalePrice() * markupIncrease;
     }
 
+    public String sell(){
+        String retailPriceString = String.format("%.2f", getRetailPrice());
+        return "Trumpet selling at £" + retailPriceString;
+    }
 }

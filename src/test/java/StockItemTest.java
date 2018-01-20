@@ -2,6 +2,7 @@ import Shop.Accessories.DrumSticks;
 import Shop.Accessories.GuitarStrings;
 import Shop.Accessories.SheetMusic;
 import Shop.Instruments.InstrumentType;
+import Shop.Instruments.Strings.Guitar;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,6 +13,7 @@ public class StockItemTest {
     private DrumSticks drumSticks;
     private GuitarStrings guitarStrings;
     private SheetMusic violinSheetMusic;
+    private Guitar bassGuitar;
 
     @Before
 
@@ -19,6 +21,17 @@ public class StockItemTest {
         guitarStrings = new GuitarStrings("Guitar Strings(0.40)", 2.50, 0.40);
         drumSticks = new DrumSticks("Wood Tip Drumsticks", 2.50, "Wood");
         violinSheetMusic = new SheetMusic("Violin Sheet Music", 1.40, InstrumentType.Violin);
+
+        bassGuitar = new Guitar(
+                "Bass Guitar",
+                65.00,
+                "Strings",
+                "Black",
+                "Maple",
+                "Electric",
+                InstrumentType.BassGuitar.getnoOfStrings()
+        );
+
     }
 
     @Test
@@ -54,5 +67,13 @@ public class StockItemTest {
     @Test
     public void canGetViolinSheetMusicInstrumentType(){
         assertEquals(InstrumentType.Violin, violinSheetMusic.getInstrumentType());
+    }
+
+    @Test
+
+    public void canSellBassGuitar(){
+        double markup = bassGuitar.calculateMarkup(0.20);
+        bassGuitar.setRetailPrice(markup);
+        assertEquals("Bass Guitar selling at £78.00", bassGuitar.sell());
     }
 }
