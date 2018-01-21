@@ -1,12 +1,13 @@
 package Shop.Instruments.Brass;
 
 import Shop.Instruments.Instrument;
+import Shop.Instruments.InstrumentCategory;
 
 public class Trumpet extends Instrument {
 
     int valves;
 
-    public Trumpet(String description, double wholesalePrice, String category, String colour, String material, int valves){
+    public Trumpet(String description, double wholesalePrice, InstrumentCategory category, String colour, String material, int valves){
         super(description, wholesalePrice, category, colour, material);
         this.valves = valves;
     }

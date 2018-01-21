@@ -1,6 +1,7 @@
 import Shop.Accessories.DrumSticks;
 import Shop.Accessories.GuitarStrings;
 import Shop.Accessories.SheetMusic;
+import Shop.Instruments.InstrumentCategory;
 import Shop.Instruments.InstrumentType;
 import Shop.Instruments.Strings.Guitar;
 import org.junit.Before;
@@ -25,7 +26,7 @@ public class StockItemTest {
         bassGuitar = new Guitar(
                 "Bass Guitar",
                 65.00,
-                "Strings",
+                 InstrumentCategory.Strings,
                 "Black",
                 "Maple",
                 "Electric",

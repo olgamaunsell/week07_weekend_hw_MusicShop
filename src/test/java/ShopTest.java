@@ -1,5 +1,6 @@
 import Shop.Accessories.GuitarStrings;
 import Shop.Instruments.Brass.Trumpet;
+import Shop.Instruments.InstrumentCategory;
 import Shop.Instruments.InstrumentType;
 import Shop.Instruments.Strings.Guitar;
 import Shop.Instruments.Strings.Violin;
@@ -25,7 +26,7 @@ public class ShopTest {
         trumpet = new Trumpet(
                 "Silver Trumpet(3)",
                 120.00,
-                "Brass",
+                 InstrumentCategory.Brass,
                 "Silver",
                 "Silver Plated",
                 3
@@ -33,7 +34,7 @@ public class ShopTest {
         violin = new Violin(
                 "Student 1/16",
                 32.00,
-                "Strings",
+                 InstrumentCategory.Strings,
                 "Brown",
                 "Canadian Maple",
                 "1/16"
@@ -41,7 +42,7 @@ public class ShopTest {
         bassGuitar = new Guitar(
                 "Bass Guitar",
                 65.00,
-                "Strings",
+                 InstrumentCategory.Strings,
                 "Black",
                 "Maple",
                 "Electric",

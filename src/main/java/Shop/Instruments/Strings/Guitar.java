@@ -1,13 +1,14 @@
 package Shop.Instruments.Strings;
 
 import Shop.Instruments.Instrument;
+import Shop.Instruments.InstrumentCategory;
 
 public class Guitar extends Instrument {
 
     String guitarType;
     int noOfStrings;
 
-    public Guitar(String description, double wholesalePrice, String category, String colour, String material, String guitarType, int noOfStrings){
+    public Guitar(String description, double wholesalePrice, InstrumentCategory category, String colour, String material, String guitarType, int noOfStrings){
         super(description, wholesalePrice, category, colour, material);
         this.guitarType = guitarType;
         this.noOfStrings = noOfStrings;

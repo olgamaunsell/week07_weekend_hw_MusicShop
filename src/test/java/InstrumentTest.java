@@ -1,4 +1,5 @@
 import Shop.Instruments.Brass.Trumpet;
+import Shop.Instruments.InstrumentCategory;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,7 +17,7 @@ public class InstrumentTest {
         trumpet = new Trumpet(
                 "Silver Trumpet(3)",
                 120.00,
-                "Brass",
+                 InstrumentCategory.Brass,
                 "Silver",
                 "Silver Plated",
                 3
@@ -28,7 +29,7 @@ public class InstrumentTest {
    @Test
 
    public void canGetCategory(){
-        assertEquals("Brass", trumpet.getCategory());
+        assertEquals(InstrumentCategory.Brass, trumpet.getCategory());
    }
 
    @Test

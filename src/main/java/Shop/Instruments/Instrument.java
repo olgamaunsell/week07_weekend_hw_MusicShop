@@ -5,13 +5,13 @@ import Shop.StockItem;
 
 public abstract class Instrument extends StockItem implements IPlayable {
 
-    private String category;
+    private InstrumentCategory category;
     private String colour;
     private String material;
 //    private String brand;
 
 
-    public Instrument(String description, double wholesalePrice, String category, String colour, String material){
+    public Instrument(String description, double wholesalePrice, InstrumentCategory category, String colour, String material){
         super(description, wholesalePrice);
         this.category = category;
         this.colour = colour;
@@ -19,7 +19,7 @@ public abstract class Instrument extends StockItem implements IPlayable {
     }
 
 
-    public String getCategory() {
+    public InstrumentCategory getCategory() {
         return this.category;
     }
 
