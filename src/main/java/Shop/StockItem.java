@@ -29,9 +29,13 @@ public abstract class StockItem implements ISellable{
         return this.retailPrice;
     }
 
+    public double calculateMarkup(double markupIncrease){
+        return this.wholesalePrice * markupIncrease;
+    }
 
+    public double getMarkupAmount() {
+        return this.retailPrice - this.wholesalePrice;
+    }
 
-//    public double calculateMarkup(double markupIncrease){
-//        return this.wholesalePrice * markupIncrease;
-//    }
+//    public abstract String getInstrumentCategory();
 }

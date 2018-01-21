@@ -26,10 +26,6 @@ public class Guitar extends Instrument {
         return "Guitar strumming";
     }
 
-    public double calculateMarkup(double markupIncrease){
-        return getWholesalePrice() * markupIncrease;
-    }
-
     public String sell(){
         String retailPriceString = String.format("%.2f", getRetailPrice());
         return getDescription() + " selling at £" + retailPriceString;

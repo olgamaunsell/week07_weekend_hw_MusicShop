@@ -15,10 +15,6 @@ public class DrumSticks extends StockItem {
         return this.tip;
     }
 
-    public double calculateMarkup(double markupIncrease){
-        return getWholesalePrice() * markupIncrease;
-    }
-
     public String sell(){
         String retailPriceString = String.format("%.2f", getRetailPrice());
         return getDescription() + " selling at £" + retailPriceString;

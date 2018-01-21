@@ -18,6 +18,7 @@ public abstract class Instrument extends StockItem implements IPlayable {
         this.material = material;
     }
 
+
     public String getCategory() {
         return this.category;
     }

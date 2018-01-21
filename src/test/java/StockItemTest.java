@@ -76,4 +76,12 @@ public class StockItemTest {
         bassGuitar.setRetailPrice(markup);
         assertEquals("Bass Guitar selling at £78.00", bassGuitar.sell());
     }
+
+    @Test
+
+    public void getMarkupAmount(){
+        double markup = bassGuitar.calculateMarkup(0.20);
+        bassGuitar.setRetailPrice(markup);
+        assertEquals(13, bassGuitar.getMarkupAmount(), 0.01);
+    }
 }
